@@ -49,12 +49,9 @@
 
     <footer class="container footer_container bg-dark text-white text-center py-3 mb-4">
       <div>
-        <p class="mb-0">&copy; 2024 MusicAgent from mITyJohn. All rights reserved.</p>
-        <p class="mb-0">Follow mITy.John on
-          <a href="https://www.instagram.com/mity.john/" class="text-white"><i class="fab fa-instagram"></i></a>&nbsp;
-          <a href="https://www.linkedin.com/in/jan-van-wassenhove-9b49893/" class="text-white"><i class="fab fa-linkedin"></i></a>&nbsp;
-          <a href="https://mityjohn.com/" class="text-white"><i class="fab fa-wordpress"></i></a>&nbsp;
-          <a href="https://x.com/mity_john" class="text-white"><i class="fab fa-twitter"></i></a>&nbsp;
+        <p class="mb-0">&copy; 2024 Coded Music Scoring with Sonic Pi by takakhoo. All rights reserved.</p>
+        <p class="mb-0">
+          <a href="https://github.com/takakhoo/Coded_Music_Scoring_SonicPI" class="text-white"><i class="fab fa-github"></i> GitHub</a>
         </p>
       </div>
     </footer>
