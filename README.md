@@ -239,10 +239,3 @@ The system generates the following files in the `Songs` folder, organized in sub
 
 If you're using the Full configuration and have your recording device properly configured (Windows only currently), recordings are made automatically.
 
-## About
-
-This project is an open-source Multi-Agent System for generating music with Sonic Pi using generative AI. It's available on GitHub for the community to use, contribute to, and improve.
-
----
-
-**Repository**: https://github.com/takakhoo/Coded_Music_Scoring_SonicPI
