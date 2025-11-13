@@ -1,5 +1,6 @@
 '''
-This file contains the GPTAgent class that interacts with the OpenAI or Anthropic API to generate song lyrics.
+GPTAgent class for interacting with OpenAI, Anthropic, or Azure OpenAI APIs.
+Handles music generation, song creation, and agent coordination.
 '''
 
 from openai import OpenAI

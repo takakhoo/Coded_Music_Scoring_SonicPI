@@ -11,7 +11,7 @@ from App.services.song import Song
 agent_bp = Blueprint('agent', __name__)
 logger = logging.getLogger()
 
-# Import agent/song classes and helpers from parent
+# Import agent/song classes and helper functions from parent directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(os.path.dirname(current_dir))
 sys.path.append(parent_dir)
@@ -22,11 +22,11 @@ with open(os.path.join(parent_dir, 'AgentConfig', 'mITyJohn', 'SongConfig.json')
 
 # Helper functions
 def find_agent_config_dir():
-    """Find the AgentConfig directory by traversing up the directory tree."""
+    """Locate the AgentConfig directory by traversing up the directory tree."""
     current_dir = os.path.dirname(os.path.abspath(__file__))
     while True:
         parent_dir = os.path.dirname(current_dir)
-        if parent_dir == current_dir:  # We've reached the root directory
+        if parent_dir == current_dir:  # Reached the root directory
             raise FileNotFoundError("AgentConfig directory not found in any parent directory")
         agent_config_path = os.path.join(parent_dir, 'AgentConfig')
         if os.path.exists(agent_config_path) and os.path.isdir(agent_config_path):

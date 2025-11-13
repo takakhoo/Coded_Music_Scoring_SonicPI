@@ -1,5 +1,6 @@
 '''
-The main file that will be executed to run the GPT agent for songwriting.
+Main entry point for running the music generation agent system.
+Handles user interaction and coordinates the song creation process.
 '''
 import os
 import logging
@@ -32,7 +33,8 @@ def get_user_input(prompt, options):
             print("Invalid input. Please enter a number.")
 
 def main():
-    print("\nWelcome to mITy John's music agent, let's make you a song!")
+    print("\nWelcome to Coded Music Scoring with Sonic Pi!")
+    print("Let's create a song together!")
 
     # Get user input for provider
     available_providers = ["openai", "anthropic"]
@@ -45,8 +47,9 @@ def main():
     # Path to the directory
     directory_path = 'AgentConfig'
 
-    # Get the list of folders
-    available_models = [folder for folder in os.listdir(directory_path) if os.path.isdir(os.path.join(directory_path, folder))]
+    # Get the list of configuration folders
+    available_models = [folder for folder in os.listdir(directory_path) 
+                       if os.path.isdir(os.path.join(directory_path, folder))]
 
     # Display the available models
     print("Available Music Agent Configurations:")
@@ -76,7 +79,7 @@ def main():
     duration = get_valid_duration()
     genre = get_valid_style()
 
-    additional_information = input("\nPlease add a description of you song (think musical influence, certain feelings that come up, ...) :")
+    additional_information = input("\nPlease add a description of your song (musical influences, mood, emotions, etc.): ")
 
     setup_logger(song_name)
     logger = logging.getLogger()

@@ -8,6 +8,7 @@ import shutil
 song_bp = Blueprint('song', __name__)
 logger = logging.getLogger()
 
+# Set up paths for imports
 current_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.abspath(os.path.join(current_dir, '..', '..'))
 sys.path.append(root_dir)

@@ -19,7 +19,7 @@
           <div v-if="formData.api_provider === 'anthropic'" class="col-12 mb-3">
             <div class="alert alert-warning" role="alert">
               <i class="fas fa-exclamation-triangle me-2"></i>
-              Warning: Cover art creation won't be possible due to model restrictions when using Anthropic.
+              Note: Album cover generation is not available when using Anthropic API.
             </div>
           </div>
         </div>

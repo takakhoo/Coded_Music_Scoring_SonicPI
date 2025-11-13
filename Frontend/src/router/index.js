@@ -33,7 +33,7 @@ const routes = [
     component: SongsLibrary
   },
   {
-    path: '/settings', // Add the new route for Settings
+    path: '/settings',
     name: 'Settings',
     component: Settings
   }

@@ -7,7 +7,7 @@ from flask_socketio import SocketIO
 from concurrent.futures import ThreadPoolExecutor
 from flask_cors import CORS
 
-# Add the parent directory to the Python path
+# Add parent directory to Python path for imports
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 sys.path.append(parent_dir)
@@ -26,7 +26,7 @@ app.logger.setLevel(logging.DEBUG)  # Set Flask logger to DEBUG level
 input_callback = None
 input_queue = Queue()
 
-# Global variable to track progress
+# Global progress tracking
 progress = 0
 progress_file = os.path.join(os.path.dirname(__file__), 'progress.json')
 

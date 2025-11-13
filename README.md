@@ -1,7 +1,5 @@
 # Coded Music Scoring with Sonic Pi
 
-![Music Agent logo](Assets/musicagent.png)
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [How It Works](#how-it-works)
@@ -21,11 +19,7 @@
 
 ## Introduction
 
-![Music Agency](Assets/img.png)
-
 This project is a Multi-Agent System (MAS) that creates music by generating Sonic Pi code. Using generative AI, it produces complete song structures, arrangements, and lyrics based on your preferences. The system generates instrumental compositions (you can add vocals through samples if desired).
-
-![architect overview](Assets/architect_overview.png)
 
 ## How It Works
 
@@ -44,29 +38,19 @@ The system includes the following specialized roles (configured in `ArtistConfig
 - **Master Engineer** - Final mastering
 - **Music Publisher** - Final output generation
 
-![Music Agent Flow](Assets/ma_flow.png)
-
 The workflow consists of four main phases:
 
 ### 1. Design Phase
 Initial planning and conceptualization of the song.
 
-![design phase](Assets/design_phase.png)
-
 ### 2. Creation Phase
 Generation of the Sonic Pi script, initial playback testing, iterative review (by agents or humans), and code refinement.
-
-![creation phase](Assets/creation_phase.png)
 
 ### 3. Mastering Phase
 Audio mixing and mastering to polish the final track.
 
-![cmastering phase](Assets/mix_master_phase.png)
-
 ### 4. Publishing Phase
 Final output generation including the Sonic Pi script file, album cover artwork, booklet, and optional audio recording.
-
-![publishing phase](Assets/recording_publish_phase.png)
 
 The final output includes a booklet with album cover art, lyrics, technical information, and the complete Sonic Pi code file (`.rb` format).
 
@@ -227,8 +211,6 @@ cd Frontend && npm run serve
 
 The web interface visualizes the music creation process and lets you interact with the AI agents. You can view the conversation history with different agents, check generated Sonic Pi code versions, and even send code directly to the Sonic Pi IDE.
 
-![Music Agent Web App](Assets/ma_webapp.png)
-
 For more details on using the web application, see the [Music Agent App README](App/README.md).
 
 ### Command Line Interface
@@ -254,8 +236,6 @@ The system generates the following files in the `Songs` folder, organized in sub
   - When using the "Full" configuration, a WAV recording file is also created automatically.
 - **Booklet**: Contains the album cover image, lyrics, and technical information about the track setup.
 - **Log File**: Complete logging of the generation process. Useful for debugging if code is lost or incomplete.
-
-![Record a WAV within Sonic Pi](Assets/WAV-recording.jpg)
 
 If you're using the Full configuration and have your recording device properly configured (Windows only currently), recordings are made automatically.
 

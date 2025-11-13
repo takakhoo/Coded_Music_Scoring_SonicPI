@@ -7,7 +7,7 @@
           class="btn btn-primary"
           :class="{ 'btn-dark-green': visibleDivs.songParameters }"
           @click="toggleVisibility('songParameters')">
-        <i class="fas fa-music"></i> Song Parameters
+        <i class="fas fa-music"></i> Song Details
       </button>
       <button
           class="btn btn-primary"
