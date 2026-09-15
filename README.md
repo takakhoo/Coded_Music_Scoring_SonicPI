@@ -21,6 +21,10 @@
 
 This project is a Multi-Agent System (MAS) that creates music by generating Sonic Pi code. Using generative AI, it produces complete song structures, arrangements, and lyrics based on your preferences. The system generates instrumental compositions (you can add vocals through samples if desired).
 
+> **Status:** working research prototype. Core composition and web workflows
+> are implemented; automated recording is currently Windows-specific and output
+> quality depends on the selected model provider and configuration.
+
 ## How It Works
 
 [Watch Music Agent in action](https://www.youtube.com/watch?v=rcfCjKbLkK0)
@@ -59,13 +63,14 @@ The final output includes a booklet with album cover art, lyrics, technical info
 ### Prerequisites
 
 - **Sonic Pi**: Required to run the generated `.rb` files. Download from: https://sonic-pi.net/
-- **Python**: Version 12 is currently supported
+- **Python**: Version 3.12
 
 ### API Setup
 
 The system supports multiple AI providers. You can use OpenAI, Anthropic, or Azure OpenAI APIs. Note that Anthropic doesn't support image generation, so album covers won't be created when using that provider.
 
-Set your API keys as environment variables or in the configuration file:
+Set API keys as environment variables. Never commit credentials to a settings
+or configuration file:
 
 **OPENAI_API_KEY:**
 - On macOS/Linux:
@@ -156,7 +161,9 @@ The system uses Yamnet for sample classification. More details can be found in t
 
 ## Configuration
 
-Set your **OPENAI_API_KEY** in `AgentConfig/mITyJohn/ArtistConfig.json` if you haven't set it as a system environment variable. You can adjust other settings in this file as needed.
+Keep API keys in environment variables. Do not write credentials into tracked
+files under `AgentConfig/`. You can adjust non-secret provider and workflow
+settings in those files as needed.
 
 The system comes with several artist configurations:
 
@@ -238,4 +245,3 @@ The system generates the following files in the `Songs` folder, organized in sub
 - **Log File**: Complete logging of the generation process. Useful for debugging if code is lost or incomplete.
 
 If you're using the Full configuration and have your recording device properly configured (Windows only currently), recordings are made automatically.
-
